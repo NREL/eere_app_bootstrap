@@ -1,14 +1,19 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\bootstrap\Utility\Variables;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+
 /**
  * @file
- * Functions to support theming in the thesource theme.
+ * Functions to support theming in the eere_app_bootstrap theme.
  */
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
-function thesource_preprocess_html(array &$variables) {
+function eere_app_bootstrap_preprocess_html(array &$variables) {
   /* Add class to html tag */
   //$variables['html_attributes']->addClass('no-js');
 
@@ -25,7 +30,7 @@ function thesource_preprocess_html(array &$variables) {
 /**
  * Implements hook_page_attachments_alter().
  */
-function thesource_page_attachments_alter(array &$page) {
+function eere_app_bootstrap_page_attachments_alter(array &$page) {
   // Tell IE to use latest rendering engine (not to use compatibility mode).
   /*$ie_edge = [
     '#type' => 'html_tag',
@@ -41,7 +46,7 @@ function thesource_page_attachments_alter(array &$page) {
 /**
  * Implements hook_preprocess_page() for page.html.twig.
  */
-function thesource_preprocess_page(array &$variables) {
+function eere_app_bootstrap_preprocess_page(array &$variables) {
   // Load the site name out of configuration.
   $config = \Drupal::config('system.site');
   $variables['site_name'] = $config->get('name');
@@ -51,14 +56,14 @@ function thesource_preprocess_page(array &$variables) {
 /**
  * Implements hook_theme_suggestions_page_alter().
  */
-function thesource_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function eere_app_bootstrap_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 
 }
 
 /**
  * Implements hook_theme_suggestions_node_alter().
  */
-function thesource_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+function eere_app_bootstrap_theme_suggestions_node_alter(array &$suggestions, array $variables) {
   /*$node = $variables['elements']['#node'];
 
   if ($variables['elements']['#view_mode'] == "full") {
@@ -69,14 +74,14 @@ function thesource_theme_suggestions_node_alter(array &$suggestions, array $vari
 /**
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
-function thesource_preprocess_block(array &$variables) {
+function eere_app_bootstrap_preprocess_block(array &$variables) {
 
 }
 
 /**
  * Implements hook_theme_suggestions_field_alter().
  */
-function thesource_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+function eere_app_bootstrap_theme_suggestions_field_alter(array &$suggestions, array $variables) {
   /*$element = $variables['element'];
   $suggestions[] = 'field__' . $element['#view_mode'];
   $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
@@ -85,7 +90,7 @@ function thesource_theme_suggestions_field_alter(array &$suggestions, array $var
 /**
  * Implements hook_theme_suggestions_field_alter().
  */
-function thesource_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+function eere_app_bootstrap_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
   /*$element = $variables['element'];
   if (isset($element['#attributes']['class']) && in_array('form-composite', $element['#attributes']['class'])) {
     $suggestions[] = 'fieldset__form_composite';
@@ -95,7 +100,7 @@ function thesource_theme_suggestions_fieldset_alter(array &$suggestions, array $
 /**
  * Implements hook_preprocess_node().
  */
-function thesource_preprocess_node(array &$variables) {
+function eere_app_bootstrap_preprocess_node(array &$variables) {
   // Default to turning off byline/submitted.
   //$variables['display_submitted'] = FALSE;
 }
@@ -103,28 +108,28 @@ function thesource_preprocess_node(array &$variables) {
 /**
  * Implements hook_theme_suggestions_views_view_alter().
  */
-function thesource_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+function eere_app_bootstrap_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
 
 }
 
 /**
  * Implements hook_preprocess_form().
  */
-function thesource_preprocess_form(array &$variables) {
+function eere_app_bootstrap_preprocess_form(array &$variables) {
   //$variables['attributes']['novalidate'] = 'novalidate';
 }
 
 /**
  * Implements hook_preprocess_select().
  */
-function thesource_preprocess_select(array &$variables) {
+function eere_app_bootstrap_preprocess_select(array &$variables) {
   //$variables['attributes']['class'][] = 'select-chosen';
 }
 
 /**
  * Implements hook_preprocess_field().
  */
-function thesource_preprocess_field(array &$variables, $hook) {
+function eere_app_bootstrap_preprocess_field(array &$variables, $hook) {
   /*switch ($variables['element']['#field_name']) {
   }*/
 }
@@ -132,7 +137,7 @@ function thesource_preprocess_field(array &$variables, $hook) {
 /**
  * Implements hook_preprocess_details().
  */
-function thesource_preprocess_details(array &$variables) {
+function eere_app_bootstrap_preprocess_details(array &$variables) {
   /*$variables['attributes']['class'][] = 'details';
   $variables['summary_attributes']['class'] = 'summary';*/
 }
@@ -140,14 +145,14 @@ function thesource_preprocess_details(array &$variables) {
 /**
  * Implements hook_theme_suggestions_details_alter().
  */
-function thesource_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+function eere_app_bootstrap_theme_suggestions_details_alter(array &$suggestions, array $variables) {
 
 }
 
 /**
  * Implements hook_preprocess_menu_local_task().
  */
-function thesource_preprocess_menu_local_task(array &$variables) {
+function eere_app_bootstrap_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
 }
 
@@ -155,6 +160,58 @@ function thesource_preprocess_menu_local_task(array &$variables) {
 /**
  * Implements hook_preprocess_system_branding_block().
  */
-function thesource_preprocess_block__system_branding_block(&$variables) {
+function eere_app_bootstrap_preprocess_block__system_branding_block(&$variables) {
   // $variables['elements']['content']['site_logo']['attributes']['class'][] = 'svg';
+}
+
+function eere_app_bootstrap_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#attributes']['data-twig-suggestion'] = $form['#id'];
+  $form['keys']['#attributes']['data-twig-suggestion'] = $form['#id'];
+
+  if ($form_id == 'search_block_form') {
+    $form['#theme'] = ['eere_app_search_form'];
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_alter
+ */
+function eere_app_bootstrap_theme_suggestions_alter(array &$suggestions, array $variables) {
+
+  if (isset($variables['element']) && isset($variables['element']['#type']) && $variables['element']['#type'] == 'form') {
+    $original_theme_hook = $variables['theme_hook_original'];
+
+    $suggestions[] = $original_theme_hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+
+  return $suggestions;
+
+}
+
+/**
+ * Implements hook_theme()
+ */
+// function eere_app_bootstrap_theme() {
+
+//   // $themes['eere_app_search_form'] = ['render element' => 'form'];
+
+//   return $themes;
+
+// }
+
+
+function eere_app_bootstrap_theme_suggestions_input_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+}
+
+
+function eere_app_bootstrap_preprocess_breadcrumb(&$variables) {
+  // Load the site name out of configuration.
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['base_path'] = base_path();
 }

@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the EERE App Bootstrap theme.
+
+thesource.settings:
+  type: theme_settings
+  label: 'eere_app_bootstrap settings'

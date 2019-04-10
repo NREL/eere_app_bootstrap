@@ -1,0 +1,3 @@
+logo:
+  path: 'themes/contrib/eere_app_bootstrap/images/doe-eere-logo.png'
+  use_default: false

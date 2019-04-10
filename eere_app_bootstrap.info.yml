@@ -1,20 +1,21 @@
-name: thesource
+name: eere_app_bootstrap
 type: theme
 description: Unbiased, scientific, authentic, trustworthy, and authoritative.
 package: communications
 core: 8.x
 libraries:
-  - thesource/global-styling
-  - thesource/bootstrap-scripts
-  - thesource/font-awesome
-  - thesource/fonts
+  - eere_app_bootstrap/global-styling
+  - eere_app_bootstrap/bootstrap-scripts
+  - eere_app_bootstrap/font-awesome
+  - eere_app_bootstrap/fonts
 base theme: bootstrap
+logo: 'themes/contrib/eere_app_bootstrap/images/doe-eere-logo.png'
 
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  subnavigation_collapsible: 'Subnavigation (Collapsible)'
   header: 'Top Bar'
-  banner: 'Site Banner'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
