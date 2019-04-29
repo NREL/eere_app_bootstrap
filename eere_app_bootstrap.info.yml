@@ -10,7 +10,7 @@ libraries:
   - eere_app_bootstrap/fonts
 base theme: bootstrap
 logo: 'themes/contrib/eere_app_bootstrap/images/doe-eere-logo.png'
-
+screenshot: eere_app_screenshot.png
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
