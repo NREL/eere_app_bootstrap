@@ -250,8 +250,32 @@ a.collapsed > .fa-plus-square-o:before {
     }
 }
 
-.footer-nav > li {
-    float: left;
-    position: relative;
-    display: block;
+footer .footer-nav {
+    padding-top: 10px;
+    font-size: .8em;
+    text-align: center;
+    color: #3C4349;
+    line-height: 1.7em;
+    width: 100%;
+    text-align: center;
+
+    > li {
+        float: none;
+        display: inline-block;
+    }
+    > li:after {
+        content: " | ";
+    }
+    > li:last-child:after { content: none; }
+    a {
+        color: #0074A1;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #bf4e00;
+    }
+    a:hover {
+        color: #3C4349;
+        text-decoration: underline;
+    }
 }

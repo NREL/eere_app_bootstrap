@@ -23,8 +23,7 @@
 set classes = [
   'menu',
   'menu--' ~ menu_name|clean_class,
-  'footer-nav',
-  'footer-links'
+  'footer-nav'
 ]
 %}
 
@@ -40,11 +39,10 @@ set classes = [
           item.is_expanded and item.below ? 'expanded dropdown',
           item.in_active_trail ? 'active active-trail',
           loop.first ? 'first',
-          loop.last ? 'last',
-          footer-links
+          loop.last ? 'last'
         ]
       %}
-      <li{{ item.attributes.addClass(item_classes) }}>
+      <li{{ item.attributes.addClass(item_classes) }} class="">
         {% set link_title = item.title %}
         {% set link_attributes = item.link_attributes %}
         {% if menu_level == 0 and item.is_expanded and item.below %}

@@ -206,9 +206,9 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }} footer-site" role="contentinfo">
-      <p class="footer-tagline">{{ site_name }} is a resource of the Department of Energy's {{ site_slogan }} Office.</p>
-      {{ page.footer }}
-    </footer>
+      <footer class="footer {{ container }} footer-site text-center" role="contentinfo">
+        <p class="footer-tagline">{{ site_name }} is a resource of the Department of Energy's {{ site_slogan }} Office.</p>
+        {{ page.footer }}
+      </footer>
   {% endblock %}
 {% endif %}

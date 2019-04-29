@@ -14370,8 +14370,32 @@ a.collapsed > .fa-plus-square-o:before {
     margin-top: 0px;
   }
 }
-.footer-nav > li {
-  float: left;
-  position: relative;
-  display: block;
+footer .footer-nav {
+  padding-top: 10px;
+  font-size: .8em;
+  color: #3C4349;
+  line-height: 1.7em;
+  width: 100%;
+  text-align: center;
+}
+footer .footer-nav > li {
+  float: none;
+  display: inline-block;
+}
+footer .footer-nav > li:after {
+  content: " | ";
+}
+footer .footer-nav > li:last-child:after {
+  content: none;
+}
+footer .footer-nav a {
+  color: #0074A1;
+  text-decoration: none;
+}
+footer .footer-nav a:visited {
+  color: #bf4e00;
+}
+footer .footer-nav a:hover {
+  color: #3C4349;
+  text-decoration: underline;
 }
