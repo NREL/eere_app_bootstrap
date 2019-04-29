@@ -14370,3 +14370,8 @@ a.collapsed > .fa-plus-square-o:before {
     margin-top: 0px;
   }
 }
+.footer-nav > li {
+  float: left;
+  position: relative;
+  display: block;
+}
