@@ -1,0 +1,22 @@
+uuid: 9d07229d-1055-4347-893c-274c5f040f38
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - eere_app_bootstrap
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: eere_app_bootstrap_search
+theme: eere_app_bootstrap
+region: navigation_collapsible
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

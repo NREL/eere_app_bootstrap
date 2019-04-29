@@ -1,0 +1,20 @@
+uuid: 40013fce-68b7-4276-a548-6747b3b92176
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eere_app_bootstrap
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: eere_app_bootstrap_local_actions
+theme: eere_app_bootstrap
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

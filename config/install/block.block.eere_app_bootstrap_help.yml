@@ -1,0 +1,22 @@
+uuid: 7fa5d10d-3c66-45de-8604-83928f6f0e3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - eere_app_bootstrap
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: eere_app_bootstrap_help
+theme: eere_app_bootstrap
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
