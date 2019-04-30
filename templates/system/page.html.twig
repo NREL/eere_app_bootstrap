@@ -65,14 +65,14 @@
     ]
     %}
     <header role="banner">
-      {% if not navbar_attributes.hasClass(container) %}
-        <div class="container-fluid">
-      {% endif %}
-
-      <!-- Navigation top row -->
+      <div class="container-fluid">
+        <!-- Navigation top row -->
       <div class="row">
         <nav class="navbar navbar-inverse mainnav">
           <div class="container-fluid">
+            {% if not navbar_attributes.hasClass(container) %}
+              <div class="{{ container }}">
+            {% endif %}
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -97,7 +97,9 @@
 	    <div class="row">
         <!-- Sub-navigation - row 2 -->
         <div class="navbar navbar-default subnav">
-          <div class="container-fluid">
+          {% if not navbar_attributes.hasClass(container) %}
+            <div class="{{ container }}">
+          {% endif %}
 
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#subnav">
