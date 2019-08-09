@@ -27,11 +27,11 @@ font-awesome:
     gpl-compatible: true
   css:
     theme:
-      https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css: { type: external, minified: true }
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css: { type: external, attributes: { integrity: sha384-I6JCnqxMbC2DuiHjsoCiLa15NVbKRf8/ooANRLsXD87zD2dVqzlz6Oqjvj470ztk, crossorigin: anonymous }, minified: true }
 fonts:
   license:
     name: SIL Open Font License, 1.1
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
   css:
     theme:
-      //fonts.googleapis.com/css?family=Karla:400,400i,700,700i: { type: external }
+      https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: { type: external, attributes: { integrity: sha384-rQMiHz+mEn4D/OX3jAnLOpLagNsx+BMY2gbIFqCRuIQ0OXpNwQqxZC6qCmq3xZSF, crossorigin: anonymous }}
