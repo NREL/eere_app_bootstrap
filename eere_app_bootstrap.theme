@@ -162,6 +162,9 @@ function eere_app_bootstrap_preprocess_menu_local_task(array &$variables) {
  */
 function eere_app_bootstrap_preprocess_block__system_branding_block(&$variables) {
   // $variables['elements']['content']['site_logo']['attributes']['class'][] = 'svg';
+  // Load the site office out of configuration.
+  $config = \Drupal::config('system.site');
+  $variables['site_office'] = $config->get('site_office');
 }
 
 function eere_app_bootstrap_form_alter(&$form, &$form_state, $form_id) {
