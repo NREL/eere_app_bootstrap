@@ -18,5 +18,14 @@
     ],
   "support": {
       "issues": "https://github.com/NREL/eere_app_bootstrap/issues"
+  },
+    "repositories": {
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+  "require": {
+    "nrel/eere_app_module": "^1.0.0"
   }
 }
