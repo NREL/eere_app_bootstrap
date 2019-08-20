@@ -9847,6 +9847,15 @@ input[type="button"].btn-block {
 .dropdown {
   position: relative;
 }
+@media (max-width: 768px) {
+  .dropdown,
+  .navbar-right a {
+    background: #2C2C2B;
+  }
+  header .navbar-collapse {
+    margin-top: 70px;
+  }
+}
 .dropdown-toggle:focus {
   outline: 0;
 }
@@ -13563,9 +13572,6 @@ blockquote {
   font-weight: bold;
   font-size: 80%;
 }
-.captcha #bootstrap-panel-body {
-  padding-left: 15px;
-}
 /**
  * Alert styling.
  */
@@ -14402,4 +14408,7 @@ footer .footer-nav a:visited {
 footer .footer-nav a:hover {
   color: #3C4349;
   text-decoration: underline;
+}
+.captcha #bootstrap-panel-body {
+  padding-left: 15px;
 }
