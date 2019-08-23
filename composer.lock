@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7604c21a9802767c3cb9cab5ec456161",
+    "content-hash": "ad4fe5c282a5aee551f5316cb12720a8",
     "packages": [
         {
             "name": "nrel/eere_app_module",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NREL/eere_app_module.git",
-                "reference": "c28910183479cee942e0b96c0fa9762ede14281e"
+                "reference": "2c29af8bceec4c8ab6b80fc73902759635a2ba7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NREL/eere_app_module/zipball/c28910183479cee942e0b96c0fa9762ede14281e",
-                "reference": "c28910183479cee942e0b96c0fa9762ede14281e",
+                "url": "https://api.github.com/repos/NREL/eere_app_module/zipball/2c29af8bceec4c8ab6b80fc73902759635a2ba7f",
+                "reference": "2c29af8bceec4c8ab6b80fc73902759635a2ba7f",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -39,14 +39,16 @@
             ],
             "description": "Companion module to the EERE branded Drupal 8 bootstrap parent theme.",
             "homepage": "https://github.com/NREL/eere_app_module",
-            "time": "2019-08-15T18:03:33+00:00"
+            "time": "2019-08-20T21:16:14+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": true,
+    "stability-flags": {
+        "nrel/eere_app_module": 20
+    },
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []

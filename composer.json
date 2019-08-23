@@ -26,6 +26,6 @@
         }
     },
   "require": {
-    "nrel/eere_app_module": "^1.0.0"
+    "nrel/eere_app_module": "dev-master"
   }
 }
