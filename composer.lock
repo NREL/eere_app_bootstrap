@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad4fe5c282a5aee551f5316cb12720a8",
+    "content-hash": "54f0b9474ab32bced15b562bf99b92f0",
     "packages": [
         {
             "name": "nrel/eere_app_module",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NREL/eere_app_module.git",
@@ -28,13 +28,13 @@
             "authors": [
                 {
                     "name": "Damon Haley (dhaley)",
-                    "role": "Maintainer",
-                    "email": "damon.haley@nrel.gov"
+                    "email": "damon.haley@nrel.gov",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "Shaun Laws (slaws)",
-                    "role": "Co-maintainer",
-                    "email": "shaun.laws@nrel.gov"
+                    "email": "shaun.laws@nrel.gov",
+                    "role": "Co-maintainer"
                 }
             ],
             "description": "Companion module to the EERE branded Drupal 8 bootstrap parent theme.",
@@ -45,9 +45,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "nrel/eere_app_module": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
