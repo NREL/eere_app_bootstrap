@@ -4,10 +4,11 @@ description: Unbiased, scientific, authentic, trustworthy, and authoritative.
 package: communications
 core: 8.x
 libraries:
-  - eere_app_bootstrap/global-styling
-  - eere_app_bootstrap/bootstrap-scripts
   - eere_app_bootstrap/font-awesome
   - eere_app_bootstrap/fonts
+libraries-extend:
+  bootstrap/framework:
+    - eere_app_bootstrap/framework
 base theme: bootstrap
 logo: 'themes/contrib/eere_app_bootstrap/images/doe-eere-logo.png'
 screenshot: eere_app_screenshot.png
