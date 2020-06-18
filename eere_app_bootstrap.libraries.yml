@@ -32,4 +32,4 @@ fonts:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
   css:
     theme:
-      https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: { type: external, attributes: { integrity: sha256-V5+Gq13NTAx4FL+WWj/ff2I3VtzOQzyt37QwrCV7bOk=, crossorigin: anonymous }}
+      https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: { type: external, attributes: { integrity: sha256-Eps2LW5M9Dpa2oy0pA93BreVDPlgG4nBUCHIHOqRkRI=, crossorigin: anonymous }}
