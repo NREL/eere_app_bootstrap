@@ -7,25 +7,20 @@
   "prefer-stable": true,
   "minimum-stability": "dev",
   "homepage": "https://github.com/NREL/eere_app_bootstrap",
-    "authors": [
-        {
-            "name": "Damon Haley (dhaley)",
-            "email": "damon.haley@nrel.gov",
-            "role": "Maintainer"
-        },
-        {
-            "name": "Shaun Laws (slaws)",
-            "email": "shaun.laws@nrel.gov",
-            "role": "Co-maintainer"
-        },
-                {
-            "name": "Christian Modern (cmodern)",
-            "email": "christian.modern@nrel.gov",
-            "role": "Co-maintainer"
-        }
-    ],
+  "authors": [
+    {
+      "name": "Shaun Laws (slaws)",
+      "email": "shaun.laws@nrel.gov",
+      "role": "Co-maintainer"
+    },
+    {
+      "name": "Christian Modern (cmodern)",
+      "email": "christian.modern@nrel.gov",
+      "role": "Co-maintainer"
+    }
+  ],
   "support": {
-      "issues": "https://github.com/NREL/eere_app_bootstrap/issues"
+    "issues": "https://github.com/NREL/eere_app_bootstrap/issues"
   },
   "require-dev": {
     "nuvoleweb/drupal-component-scaffold": "*",
@@ -34,28 +29,28 @@
     "drupal/core": "~8"
   },
   "require": {
-      "nrel/eere_app_module": "1.0.1",
-      "drupal/bootstrap": "~3.13",
-      "drupal/bootstrap_layouts": "^5.1",
-      "twbs/bootstrap": "^3.3.7"
+    "nrel/eere_app_module": "1.0.1",
+    "drupal/bootstrap": "~3.13",
+    "drupal/bootstrap_layouts": "^5.1",
+    "twbs/bootstrap": "^3.3.7"
   },
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "assets": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        "packages.drupal.org": false
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "extra": {
-        "installer-paths": {
-            "build/core": ["type:drupal-core"],
-            "build/modules/contrib/{$name}": ["type:drupal-module"],
-            "build/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "build/themes/contrib/{$name}": ["type:drupal-theme"]
-        }
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    "packages.drupal.org": false
+  },
+  "extra": {
+    "installer-paths": {
+      "build/core": ["type:drupal-core"],
+      "build/modules/contrib/{$name}": ["type:drupal-module"],
+      "build/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "build/themes/contrib/{$name}": ["type:drupal-theme"]
     }
+  }
 }

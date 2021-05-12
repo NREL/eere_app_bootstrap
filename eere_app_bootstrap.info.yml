@@ -3,6 +3,7 @@ type: theme
 description: Unbiased, scientific, authentic, trustworthy, and authoritative.
 package: communications
 core: 8.x
+core_version_requirement: ^8 || ^9
 libraries:
   - eere_app_bootstrap/font-awesome
   - eere_app_bootstrap/fonts
