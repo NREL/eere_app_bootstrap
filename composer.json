@@ -28,7 +28,7 @@
     "drupal/core": "~8"
   },
   "require": {
-    "nrel/eere_app_module": "dev-master",
+    "nrel/eere_app_module": "dev-main",
     "drupal/bootstrap": "~3.13",
     "drupal/bootstrap_layouts": "^5.1",
     "twbs/bootstrap": "^3.3.7"

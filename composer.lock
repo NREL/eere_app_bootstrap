@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5473a5b7a0f9fb04d0940b50c58158ab",
+    "content-hash": "67a7c055c7c3de231f544bd92694e2b8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2037,16 +2037,16 @@
         },
         {
             "name": "nrel/eere_app_module",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NREL/eere_app_module.git",
-                "reference": "e695d013e3c36e4db9a096db61842ae2eb51b650"
+                "reference": "8c8a22acbd8f7cb52565869d3038cfc105634007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NREL/eere_app_module/zipball/e695d013e3c36e4db9a096db61842ae2eb51b650",
-                "reference": "e695d013e3c36e4db9a096db61842ae2eb51b650",
+                "url": "https://api.github.com/repos/NREL/eere_app_module/zipball/8c8a22acbd8f7cb52565869d3038cfc105634007",
+                "reference": "8c8a22acbd8f7cb52565869d3038cfc105634007",
                 "shasum": ""
             },
             "default-branch": true,
@@ -2071,9 +2071,9 @@
             "homepage": "https://github.com/NREL/eere_app_module",
             "support": {
                 "issues": "https://github.com/NREL/eere_app_module/issues",
-                "source": "https://github.com/NREL/eere_app_module/tree/master"
+                "source": "https://github.com/NREL/eere_app_module/tree/main"
             },
-            "time": "2021-07-01T14:57:49+00:00"
+            "time": "2021-08-13T15:24:37+00:00"
         },
         {
             "name": "pear/archive_tar",
