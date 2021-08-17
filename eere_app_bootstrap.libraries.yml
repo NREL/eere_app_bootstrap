@@ -1,34 +1,30 @@
-framework:
+global-styling:
+  version: VERSION
+  js:
+    js/global.js: {}
   css:
     theme:
-      css/style.css : {}
-  js:
-    bootstrap/js/affix.js: {}
-    bootstrap/js/alert.js: {}
-    bootstrap/js/button.js: {}
-    bootstrap/js/carousel.js: {}
-    bootstrap/js/collapse.js: {}
-    bootstrap/js/dropdown.js: {}
-    bootstrap/js/modal.js: {}
-    bootstrap/js/tooltip.js: {}
-    bootstrap/js/popover.js: {}
-    bootstrap/js/scrollspy.js: {}
-    bootstrap/js/tab.js: {}
-    bootstrap/js/transition.js: {}
+      css/nrel.complete.css: {}
+      css/nrel.application.css: {}
+      css/style.css: {}
+      css/colors.css: {}
 
-font-awesome:
-  remote: http://fontawesome.io
-  version: 4.6.0
-  license:
-    name: MIT
-    url: http://fontawesome.io/license/
-    gpl-compatible: true
+bootstrap:
   js:
-    https://kit.fontawesome.com/36ddb5b453.js: {}
-fonts:
-  license:
-    name: SIL Open Font License, 1.1
-    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    /libraries/bootstrap/dist/js/bootstrap.bundle.min.js: {}
   css:
-    theme:
-      https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: { type: external, attributes: { integrity: sha256-Eps2LW5M9Dpa2oy0pA93BreVDPlgG4nBUCHIHOqRkRI=, crossorigin: anonymous }}
+    component:
+      /libraries/bootstrap/dist/css/bootstrap.min.css: {}
+
+# libraries-override
+fontawesome:
+  header: true
+  version: VERSION
+  js:
+    //use.fontawesome.com/36ddb5b453.js: {
+      type: external,
+      attributes: {
+        integrity: sha512-mpSQHb7Fas4AuYySFa5rA+SFe0DZ5og/qFRIv0wIZ3zB980xTvXX7UjcfggPw4rzKszDOYk2V3XFa5nFdUJ47Q==,
+        crossorigin: anonymous
+      }
+    }

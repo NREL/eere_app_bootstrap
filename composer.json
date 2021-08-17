@@ -1,6 +1,6 @@
 {
   "name": "nrel/eere_app_bootstrap",
-  "description": "EERE branded Drupal 8 bootstrap parent theme.",
+  "description": "EERE App branded theme for Bootstrap.",
   "type": "drupal-theme",
   "keywords": ["drupal", "bootstrap", "eere"],
   "license": "GPL-2.0",
@@ -22,28 +22,6 @@
   "support": {
     "issues": "https://github.com/NREL/eere_app_bootstrap/issues"
   },
-  "require-dev": {
-    "drupal/console": "~1",
-    "drush/drush": "*",
-    "drupal/core": "~8"
-  },
-  "require": {
-    "nrel/eere_app_module": "dev-main",
-    "drupal/bootstrap": "~3.13",
-    "drupal/bootstrap_layouts": "^5.1",
-    "twbs/bootstrap": "^3.3.7"
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    },
-    "packages.drupal.org": false
-  },
   "extra": {
     "installer-paths": {
       "build/core": ["type:drupal-core"],
@@ -51,5 +29,33 @@
       "build/profiles/contrib/{$name}": ["type:drupal-profile"],
       "build/themes/contrib/{$name}": ["type:drupal-theme"]
     }
+  },
+  "require": {
+    "drupal/bootstrap": "~3.13",
+    "drupal/bootstrap_layouts": "^5.1",
+    "drupal/bootstrap_barrio": "~5.1.0",
+    "nrel/eere_app_template_bootstrap5": "dev-main"
+  },
+  "require-dev": {
+    "drupal/console": "~1",
+    "drush/drush": "*",
+    "drupal/core": "~8"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "assets" : {
+      "type": "composer",
+      "url": "https://asset-packagist.nrel.gov/nrel/drupal8/",
+      "options" : {
+        "ssl" : {
+          "verify_peer": false,
+          "allow_self_signed": true
+        }
+      }
+    },
+    "packages.drupal.org": false
   }
 }
