@@ -31,7 +31,6 @@
     }
   },
   "require": {
-    "drupal/bootstrap": "~3.13",
     "drupal/bootstrap_layouts": "^5.1",
     "drupal/bootstrap_barrio": "~5.5.2",
     "nrel/eere_app_template_bootstrap5": "dev-main"
