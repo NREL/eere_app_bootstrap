@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2753b407dcfc64348df8161fda2e4985",
+    "content-hash": "a8f3c2832729657bc521ceee9e10cacd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1017,27 +1017,27 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "5.1.5",
+            "version": "5.5.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "5.1.5"
+                "reference": "5.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.1.5.zip",
-                "reference": "5.1.5",
-                "shasum": "65567fb80be6a2f9b941b5f4537eb2585619b3d6"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.2.zip",
+                "reference": "5.5.2",
+                "shasum": "1e0682d5962df4c54a150aeff2f8c14f1f9ab8a2"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
-                "twbs/bootstrap": "^4.4.1"
+                "twbs/bootstrap": "^5.0.0"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "5.1.5",
-                    "datestamp": "1621798643",
+                    "version": "5.5.2",
+                    "datestamp": "1626640981",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4713,16 +4713,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v4.6.0",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6ffb0b48e455430f8a5359ed689ad64c1143fac2"
+                "reference": "f20fece3a8cdd0e76a42c2737524b7652bf54d26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6ffb0b48e455430f8a5359ed689ad64c1143fac2",
-                "reference": "6ffb0b48e455430f8a5359ed689ad64c1143fac2",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/f20fece3a8cdd0e76a42c2737524b7652bf54d26",
+                "reference": "f20fece3a8cdd0e76a42c2737524b7652bf54d26",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4735,11 +4735,6 @@
                 "twitter/bootstrap": "self.version"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev"
-                }
-            },
             "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal8/downloads/",
             "license": [
                 "MIT"
@@ -4766,13 +4761,17 @@
                 "sass",
                 "web"
             ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v5.1.0"
+            },
             "transport-options": {
                 "ssl": {
                     "verify_peer": false,
                     "allow_self_signed": true
                 }
             },
-            "time": "2021-01-19T16:16:38+00:00"
+            "time": "2021-08-04T15:41:51+00:00"
         },
         {
             "name": "twig/twig",
