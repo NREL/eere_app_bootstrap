@@ -62,17 +62,17 @@
       "mkdir -p ../../../../docroot/libraries/bootstrap",
       "cp -R ../../../../vendor/twbs/bootstrap/dist ../../../../docroot/libraries/bootstrap",
       "cp ./favicon.ico ../../../../docroot/",
-      "cp ../../../../vendor/nrel/nrel_app_template_bootstrap5/assets/images/* ./img/",
+      "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/assets/images/* ./img/",
       "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/client/css/* ./css/",
-      "cp ../../../../vendor/nrel/nrel_app_template_bootstrap5/client/fonts/* ./fonts/"
+      "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/client/fonts/* ./fonts/"
     ],
     "post-update-cmd": [
       "mkdir -p ../../../../docroot/libraries/bootstrap",
       "cp -R ../../../../vendor/twbs/bootstrap/dist ../../../../docroot/libraries/bootstrap",
       "cp ./favicon.ico ../../../../docroot/",
-      "cp ../../../../vendor/nrel/nrel_app_template_bootstrap5/assets/images/* ./img/",
+      "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/assets/images/* ./img/",
       "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/client/css/* ./css/",
-      "cp ../../../../vendor/nrel/nrel_app_template_bootstrap5/client/fonts/* ./fonts/"
+      "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/client/fonts/* ./fonts/"
     ]
   }
 }
