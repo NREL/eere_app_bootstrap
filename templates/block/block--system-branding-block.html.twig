@@ -16,14 +16,12 @@
  */
 #}
 {% block content %}
-  <div class="navbar-brand">
-    <span><img src="{{ site_logo }}" alt="" usemap="#logo" class="banner-logo">
-      <map name="logo">
-        <area shape="rect" coords="1,1,198,20" href="https://www.energy.gov" alt="Energy.gov">
-        <area shape="rect" coords="2,22,198,75" href="https://www.energy.gov/eere/office-energy-efficiency-renewable-energy" alt="Office of Energy Efficiency and Renewable Energy">
-      </map>
+    <span class="banner-title"><img src="{{ site_logo }}" alt="" usemap="#logo" class="banner-logo d-block d-lg-inline mb-2 mb-lg-0">
+        <map name="logo">
+            <area shape="rect" coords="1,1,198,20" href="https://www.energy.gov" alt="Energy.gov">
+            <area shape="rect" coords="2,22,198,75" href="https://www.energy.gov/eere/office-energy-efficiency-renewable-energy" alt="Office of Energy Efficiency and Renewable Energy">
+        </map>
+        <a href="#" class="navbar-brand">{{ site_name }}</a>
     </span>
-    <span class="banner-title"><a href="https://www.energy.gov/eere/femp/federal-energy-management-program">{{ site_office }}</a></span>
-  </div>
 {% endblock %}
 

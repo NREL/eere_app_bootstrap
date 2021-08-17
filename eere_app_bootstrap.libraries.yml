@@ -1,14 +1,3 @@
-global-styling:
-  version: VERSION
-  js:
-    js/global.js: {}
-  css:
-    theme:
-      css/nrel.complete.css: {}
-      css/nrel.application.css: {}
-      css/style.css: {}
-      css/colors.css: {}
-
 bootstrap:
   js:
     /libraries/bootstrap/dist/js/bootstrap.bundle.min.js: {}
@@ -16,6 +5,28 @@ bootstrap:
     component:
       /libraries/bootstrap/dist/css/bootstrap.min.css: {}
 
+global-styling:
+  version: VERSION
+  js:
+    js/global.js: {}
+  css:
+    theme:
+      css/app.css: {}
+      css/style.css: {}
+      css/colors.css: {}
+
+nrel_karla:
+  version: VERSION
+  css:
+    component:
+      fonts/nrel_karla.css: {}
+      //fonts.googleapis.com/css?family=Karla:400,400i,700,700i: {
+        type: external,
+        attributes: {
+          integrity: sha512-Jo0RQ/Ov6Pu29adta/cGvCs0V91Bqiaeot0yew4SKz5ro/ITk5V31RY1rvh2fECp+4ixH5psIYBFw7lUVw6WWg==,
+          crossorigin: anonymous
+        }
+      }
 # libraries-override
 fontawesome:
   header: true

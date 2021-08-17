@@ -11,6 +11,161 @@ use Drupal\Core\Url;
  */
 
 /**
+ * Implements hook_preprocess_fieldset() for rendering as a Bootstrap card.
+ */
+function eere_app_bootstrap_preprocess_eere_bootstrap_card(&$variables) {
+    if (isset($variables['element'])) {
+        $element = $variables['element'];
+        $map = [
+            '#id' => 'id',
+            '#attributes' => 'attributes',
+            '#body_attributes' => 'body_attributes',
+            '#content_attributes' => 'body_attributes',
+            '#description' => 'description',
+            '#description_attributes' => 'description_attributes',
+            '#description_display' => 'description_display',
+            '#errors' => 'errors',
+            '#footer' => 'footer',
+            '#required' => 'required',
+            '#title' => 'heading',
+            '#title_attributes' => 'heading_attributes',
+        ];
+        foreach ($map as $element_property => $variable_property) {
+            if (strpos($element_property, 'attributes')) {
+                $variables[$variable_property] = [];
+            }
+            if (isset($element[$element_property])) {
+                $variables[$variable_property] = $element[$element_property];
+            }
+        }
+
+        // Add necessary classes.
+        if (!isset($variables['attributes']['class'])) {
+            $variables['attributes']['class'] = [];
+        }
+        $variables['attributes']['class'][] = 'form-item';
+        $variables['attributes']['class'][] = 'js-form-item';
+        $variables['attributes']['class'][] = 'form-wrapper';
+        $variables['attributes']['class'][] = 'js-form-wrapper';
+
+        // Merge all possible content from the element into a single render array.
+        $body = [];
+        $properties = ['#field_prefix', '#body', '#children', ];
+
+        // Only add the #value property if it's a "details" or "fieldset" element
+        // type. Some form elements may use "CompositeFormElementTrait" which
+        // will inadvertently and eventually become preprocessed here and #value
+        // may actually be the element's value instead of a renderable element.
+        if ('details' == $element['#type'] || 'fieldset' == $element['#type']) {
+            $properties[] = '#value';
+        }
+
+        // Add the "#field_suffix" property.
+        $properties[] = '#field_suffix';
+        foreach ($properties as $property) {
+            if (isset($element[$property])) {
+                $body[$property] = $element[$property];
+            }
+        }
+        $variables['body'] = array_filter($body);
+
+        // Handle specific "details" elements.
+        if ('details' == $element['#type']) {
+            // Details are always collapsible per the HTML5 spec.
+            // @see https://www.drupal.org/node/1852020
+            $variables['collapsible'] = TRUE;
+
+            // Determine the collapsed state.
+            $variables['collapsed'] = !$element['#open'];
+
+            // Remove the unnecessary details attribute.
+            unset($element['#open']);
+        }
+        // Handle specific "fieldset" elements.
+        else if ('fieldset' == $element['#type']) {
+            // Override variables to mimic the default "fieldset" element info.
+            // They will be mapped below if they exist on the element.
+            unset($variables['collapsible'], $variables['collapsed']);
+            $variables['collapsed'] = 'collapsed';
+            //$variables['collapsible'] = 'collapsible';
+        }
+
+
+        // Retrieve the ID, generating one if needed.
+        $id = isset($variables['id']) ? $variables['id'] : Html::getUniqueId('bootstrap-card');
+        if (!isset($variables['attributes']['id'])) {
+            $variables['attributes']['id'] = $id;
+        }
+
+        // Handle collapsible state.
+        if (!isset($variables['heading_attributes']['class'])) {
+            $variables['heading_attributes']['class'] = [];
+        }
+        if (isset($variables['heading']) && isset($variables['collapsible'])) {
+            // Retrieve the body ID attribute.
+            if ($body_id = isset($variables['body_attributes']['id']) ? $variables['body_attributes']['id'] : "$id--content") {
+                // Ensure the target is set.
+                if ($variables['target'] = isset($variables['target']) ? $variables['target'] : "#$body_id") {
+                    // Set additional necessary attributes to the heading.
+                    $variables['heading_attributes']['aria-controls'] =  preg_replace('/^#/', '', $variables['target']);
+                    $variables['heading_attributes']['aria-expanded'] = !$variables['collapsed'] ? 'true' : 'false';
+                    $variables['heading_attributes']['aria-pressed'] = !$variables['collapsed'] ? 'true' : 'false';
+                    $variables['heading_attributes']['data-toggle'] = 'collapse';
+                    $variables['heading_attributes']['role'] = 'button';
+                }
+            }
+        }
+
+        // Ensure we render HTML from heading.
+        $heading = $variables['heading'];
+        if ($heading && (is_string($heading) || ($heading instanceof MarkupInterface))) {
+            $variables['heading'] = ['#markup' => $heading];
+        }
+    }
+    foreach ($variables as $name => $value) {
+        if (strpos($name, 'attributes') !== FALSE && is_array($value)) {
+            $variables[$name] = new Attribute($value);
+        }
+    }
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function eere_app_bootstrap_form_system_theme_settings_alter(&$form, FormStateInterface $form_state)
+{
+    // Add NREL Karla font.
+    $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['nrel_karla'] = 'NREL Karla';
+
+    // Add NREL Fontawesome so that we can use NREL's Pro version.
+    $form['fonts']['icons']['bootstrap_barrio_icons']['#options']['fontawesome'] = 'NREL Font Awesome';
+}
+
+/**
+ * Implements hook_preprocess_system_branding_block().
+ */
+function eere_app_bootstrap_preprocess_block__system_branding_block(&$variables) {
+    // $variables['elements']['content']['site_logo']['attributes']['class'][] = 'svg';
+    // Load the site office out of configuration.
+    $config = \Drupal::config('system.site');
+    $variables['site_office'] = $config->get('site_office');
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function eere_app_bootstrap_preprocess_breadcrumb(&$variables) {
+    // Load the site name out of configuration.
+    $config = \Drupal::config('system.site');
+    $variables['site_name'] = $config->get('name');
+    $variables['base_path'] = base_path();
+}
+
+/**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function eere_app_bootstrap_preprocess_html(array &$variables) {
@@ -31,64 +186,47 @@ function eere_app_bootstrap_preprocess_page(array &$variables) {
     $variables['site_slogan'] = $config->get('slogan');
 }
 
-/**
- * Implements hook_preprocess_system_branding_block().
- */
-function eere_app_bootstrap_preprocess_block__system_branding_block(&$variables) {
-    // $variables['elements']['content']['site_logo']['attributes']['class'][] = 'svg';
-    // Load the site office out of configuration.
-    $config = \Drupal::config('system.site');
-    $variables['site_office'] = $config->get('site_office');
+function eere_app_bootstrap_theme() {
+    $hooks['eere_app_bootstrap_modal'] = [
+        'variables' => [
+            'attributes' => [],
+            'body' => '',
+            'body_attributes' => [],
+            'close_button' => TRUE,
+            'content_attributes' => [],
+            'description' => NULL,
+            'description_display' => 'before',
+            'dialog_attributes' => [],
+            'footer' => '',
+            'footer_attributes' => [],
+            'header_attributes' => [],
+            'id' => NULL,
+            'size' => NULL,
+            'title' => '',
+            'title_attributes' => [],
+        ],
+        'template' => 'bootstrap/eere-app-bootstrap-modal',
+    ];
+    $hooks['eere_app_bootstrap_card'] = [
+        'variables' => [
+            'attributes' => [],
+            'body' => [],
+            'body_attributes' => [],
+            'collapsible' => FALSE,
+            'collapsed' => FALSE,
+            'description' => NULL,
+            'description_display' => 'before',
+            'footer' => NULL,
+            'footer_attributes' => [],
+            'heading' => NULL,
+            'heading_attributes' => [],
+            'id' => NULL,
+        ],
+        'template' => 'bootstrap/eere-app-bootstrap-card',
+    ];
+    return $hooks;
 }
 
-function eere_app_bootstrap_form_alter(&$form, &$form_state, $form_id) {
-    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = $form['#id'];
-    $form['keys']['#attributes']['data-twig-suggestion'] = $form['#id'];
-
-    if ($form_id == 'search_block_form') {
-        $form['#theme'] = ['eere_app_search_form'];
-    }
-}
-
-
-/**
- * Implements hook_theme_suggestions_alter
- */
-function eere_app_bootstrap_theme_suggestions_alter(array &$suggestions, array $variables) {
-
-    if (isset($variables['element']) && isset($variables['element']['#type']) && $variables['element']['#type'] == 'form') {
-        $original_theme_hook = $variables['theme_hook_original'];
-
-        $suggestions[] = $original_theme_hook . '__' . str_replace('-', '_', $variables['element']['#id']);
-    }
-
-    return $suggestions;
-
-}
-
-/**
- * Implements hook_theme()
- */
-// function eere_app_bootstrap_theme() {
-
-//   // $themes['eere_app_search_form'] = ['render element' => 'form'];
-
-//   return $themes;
-
-// }
-
-
-function eere_app_bootstrap_theme_suggestions_input_alter(&$suggestions, array $variables) {
-    $element = $variables['element'];
-    if (isset($element['#attributes']['data-twig-suggestion'])) {
-        $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
-    }
-}
-
-
-function eere_app_bootstrap_preprocess_breadcrumb(&$variables) {
-    // Load the site name out of configuration.
-    $config = \Drupal::config('system.site');
-    $variables['site_name'] = $config->get('name');
-    $variables['base_path'] = base_path();
+function eere_app_bootstrap_theme_suggestions_fieldset_alter(&$suggestions, &$vars, $hook) {
+    $suggestions[] = 'eere_app_bootstrap_card';
 }
