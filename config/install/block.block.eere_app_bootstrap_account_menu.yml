@@ -1,6 +1,6 @@
 uuid: 19e9e042-25f8-4ef8-bdc1-c0ef5f13fa7e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -9,11 +9,11 @@ dependencies:
   theme:
     - eere_app_bootstrap
 _core:
-  default_config_hash: R2K_qX0ZUMbUL6ie_-S9tZVjvqmlWKlscikgeRv9vhw
+  default_config_hash: ncNMIPUAI_l4lHi-M0Grl4CvTyZbwo7dQbyt5641hbY
 id: eere_app_bootstrap_account_menu
 theme: eere_app_bootstrap
-region: navigation_collapsible
-weight: -7
+region: secondary_menu
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -23,4 +23,5 @@ settings:
   label_display: '0'
   level: 1
   depth: 2
+  expand_all_items: false
 visibility: {  }

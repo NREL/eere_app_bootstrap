@@ -7,11 +7,11 @@ dependencies:
   theme:
     - eere_app_bootstrap
 _core:
-  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
+  default_config_hash: Nh-NAgj5QhRfyJcMn11My1AmP_kUhhf4HDqB06oCg-U
 id: eere_app_bootstrap_branding
 theme: eere_app_bootstrap
-region: navigation
-weight: 0
+region: header
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

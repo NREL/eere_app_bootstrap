@@ -11,9 +11,9 @@ global-styling:
     js/global.js: {}
   css:
     theme:
-      css/app.css: {}
-      css/style.css: {}
       css/colors.css: {}
+      css/app.css: {}
+      css/overrides.css: {}
 
 nrel_karla:
   version: VERSION
@@ -32,7 +32,7 @@ fontawesome:
   header: true
   version: VERSION
   js:
-    //use.fontawesome.com/36ddb5b453.js: {
+    //kit.fontawesome.com/36ddb5b453.js: {
       type: external,
       attributes: {
         integrity: sha512-mpSQHb7Fas4AuYySFa5rA+SFe0DZ5og/qFRIv0wIZ3zB980xTvXX7UjcfggPw4rzKszDOYk2V3XFa5nFdUJ47Q==,

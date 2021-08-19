@@ -1,0 +1,14 @@
+/* Overrides of the app.css */
+/* the app css sets icon-circle line height, overriding the line-height set for fa-lg. */
+
+.circle-icon {
+  line-height: 30px !important;
+}
+
+ol.breadcrumb {
+  background-color: unset;
+}
+
+ol.breadcrumb > li + li:before {
+  content: unset;
+}

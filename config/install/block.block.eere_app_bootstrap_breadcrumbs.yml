@@ -7,10 +7,10 @@ dependencies:
   theme:
     - eere_app_bootstrap
 _core:
-  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+  default_config_hash: VZYrKJSGcBwN6D3qkbYpzABknkzBcA6TFIOJ3k5NiCc
 id: eere_app_bootstrap_breadcrumbs
 theme: eere_app_bootstrap
-region: header
+region: breadcrumb
 weight: -7
 provider: null
 plugin: system_breadcrumb_block
