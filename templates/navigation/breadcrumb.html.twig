@@ -13,15 +13,12 @@
 <div class="breadcrumbs">
   {% if breadcrumb %}
     <ol class="breadcrumb">
-      <li {{ item.attributes }}>
-        <a href="https://www.energy.gov/eere/office-energy-effficiency-renewable-energy">EERE</a>&nbsp;&raquo;&nbsp;<a href='{{ base_path }}'>{{ site_name }}</a>
-      </li>
       {% for item in breadcrumb %}
         <li {{ item.attributes }}>
-          {% if item.url and not loop.last %}
-            &nbsp;&raquo;&nbsp;<a href="{{ item.url }}">{{ item.text }}</a>
+          {% if item.url %}
+            &nbsp;<a href="{{ item.url }}">{{ item.text }}</a>&nbsp;&raquo;&nbsp;
           {% else %}
-            &nbsp;&raquo;&nbsp;{{ item.text }}
+            &nbsp;{{ item.text }}
           {% endif %}
         </li>
       {% endfor %}

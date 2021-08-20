@@ -160,29 +160,32 @@ function eere_app_bootstrap_preprocess_block__system_branding_block(&$variables)
 function eere_app_bootstrap_preprocess_breadcrumb(&$variables) {
     // Load the site name out of configuration.
     $config = \Drupal::config('system.site');
-    $variables['site_name'] = $config->get('name');
     $variables['base_path'] = base_path();
+    if (1 == count($variables['breadcrumb'])) {
+        $variables['breadcrumb'][0]['text'] = $config->get('name');
+    }
+    array_unshift($variables['breadcrumb'], ['text' => 'EERE', 'url' => 'https://www.energy.gov/eere/office-energy-effficiency-renewable-energy']);
 }
 
 /**
  * Implements hook_preprocess_page() for page.html.twig.
  */
 function eere_app_bootstrap_preprocess_page(array &$variables) {
-  $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
-  if ($fonts) {
-    $variables['#attached']['library'][] = (in_array($fonts, ['nrel_karla']) ? 'eere_app_bootstrap' : 'bootstrap_barrio') . '/' . $fonts;
-  }
-  $icons = theme_get_setting('bootstrap_barrio_icons');
-  if ($icons) {
-    $variables['#attached']['library'][] = ( $icons == 'fontawesome' ? 'eere_app_bootstrap' : 'bootstrap_barrio' ) . '/' . $icons;
-  }
-  // Load the site name out of configuration.
-  $config = \Drupal::config('system.site');
-  $variables['office_name'] = $config->get('site_office');
-  $variables['office_url'] = $config->get('site_office_url');
-  $variables['contact_url'] = $config->get('contact_url');
-  $variables['site_name'] = $config->get('name');
-  $variables['site_slogan'] = $config->get('slogan');
+    $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
+    if ($fonts) {
+        $variables['#attached']['library'][] = (in_array($fonts, ['nrel_karla']) ? 'eere_app_bootstrap' : 'bootstrap_barrio') . '/' . $fonts;
+    }
+    $icons = theme_get_setting('bootstrap_barrio_icons');
+    if ($icons) {
+        $variables['#attached']['library'][] = ( $icons == 'fontawesome' ? 'eere_app_bootstrap' : 'bootstrap_barrio' ) . '/' . $icons;
+    }
+    // Load the site name out of configuration.
+    $config = \Drupal::config('system.site');
+    $variables['office_name'] = $config->get('site_office');
+    $variables['office_url'] = $config->get('site_office_url');
+    $variables['contact_url'] = $config->get('contact_url');
+    $variables['site_name'] = $config->get('name');
+    $variables['site_slogan'] = $config->get('slogan');
 }
 
 function eere_app_bootstrap_theme() {
