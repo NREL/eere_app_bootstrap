@@ -165,14 +165,6 @@ function eere_app_bootstrap_preprocess_breadcrumb(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for html.html.twig.
- */
-function eere_app_bootstrap_preprocess_html(array &$variables) {
-    $config = \Drupal::config('system.site');
-    $variables['head_title']['name'] = $config->getOriginal("name", false);
-}
-
-/**
  * Implements hook_preprocess_page() for page.html.twig.
  */
 function eere_app_bootstrap_preprocess_page(array &$variables) {
