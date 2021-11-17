@@ -12,3 +12,18 @@ ol.breadcrumb {
 ol.breadcrumb > li + li:before {
   content: unset;
 }
+
+.alert.alert-success.fade {
+  opacity: 1;
+}
+
+.alert.alert-success.fade em {
+  background-color: #dff0d8;
+  color:#3c763d;
+  vertical-align: initial;
+  opacity: 1;
+}
+
+.alert.alert-success.fade em a {
+  color:#3c763d;
+}
