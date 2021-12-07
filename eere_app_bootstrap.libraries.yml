@@ -23,7 +23,7 @@ nrel_karla:
       //fonts.googleapis.com/css?family=Karla:400,400i,700,700i: {
         type: external,
         attributes: {
-          integrity: sha512-Jo0RQ/Ov6Pu29adta/cGvCs0V91Bqiaeot0yew4SKz5ro/ITk5V31RY1rvh2fECp+4ixH5psIYBFw7lUVw6WWg==,
+          integrity: sha384-v/DPrgquMjyJcVZIlA66/hDO68v/ftn2cQvsf9LNTmFOjc8I0+pmuvsa3idltjEw,
           crossorigin: anonymous
         }
       }
@@ -35,7 +35,7 @@ fontawesome:
     //kit.fontawesome.com/36ddb5b453.js: {
       type: external,
       attributes: {
-        integrity: sha512-mpSQHb7Fas4AuYySFa5rA+SFe0DZ5og/qFRIv0wIZ3zB980xTvXX7UjcfggPw4rzKszDOYk2V3XFa5nFdUJ47Q==,
+        integrity: sha384-eP35QeLxHQXB84YzbCW5707Lbt6PKvWsOvbzGWjFYkIdcmqs185hpKJtydJ938l/,
         crossorigin: anonymous
       }
     }
