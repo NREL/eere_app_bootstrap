@@ -13,17 +13,17 @@ ol.breadcrumb > li + li:before {
   content: unset;
 }
 
-.alert.alert-success.fade {
+.alert.fade {
   opacity: 1;
 }
 
-.alert.alert-success.fade em {
+.alert.fade em {
   background-color: #dff0d8;
   color:#3c763d;
   vertical-align: initial;
   opacity: 1;
 }
 
-.alert.alert-success.fade em a {
+.alert.fade em a {
   color:#3c763d;
 }
