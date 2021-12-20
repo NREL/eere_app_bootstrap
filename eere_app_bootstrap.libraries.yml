@@ -20,7 +20,7 @@ nrel_karla:
   css:
     component:
       fonts/nrel_karla.css: {}
-      //fonts.googleapis.com/css?family=Karla:400,400i,700,700i: {
+      https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: {
         type: external,
         attributes: {
           integrity: sha384-v/DPrgquMjyJcVZIlA66/hDO68v/ftn2cQvsf9LNTmFOjc8I0+pmuvsa3idltjEw,
@@ -32,7 +32,7 @@ fontawesome:
   header: true
   version: VERSION
   js:
-    //kit.fontawesome.com/36ddb5b453.js: {
+    https://kit.fontawesome.com/36ddb5b453.js: {
       type: external,
       attributes: {
         integrity: sha384-eP35QeLxHQXB84YzbCW5707Lbt6PKvWsOvbzGWjFYkIdcmqs185hpKJtydJ938l/,
