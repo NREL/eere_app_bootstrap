@@ -23,7 +23,7 @@ nrel_karla:
       https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: {
         type: external,
         attributes: {
-          integrity: sha384-eP35QeLxHQXB84YzbCW5707Lbt6PKvWsOvbzGWjFYkIdcmqs185hpKJtydJ938l/,
+          integrity: sha384-3hKGdCaJn3JRgta+0FCdwnR+uzmRwg94jx3h9Z8d/L4hnXvVWQu5V4DAI22OdErH,
           crossorigin: anonymous
         }
       }
