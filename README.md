@@ -19,9 +19,8 @@ Run the EERE App Bootstrap post install commands from the root project to copy t
 * composer run-script post-install-cmd -d ./docroot/themes/contrib/eere_app_bootstrap
 
 ### Drupal 8
-@see https://github.com/NREL/eere_app_bootstrap/blob/d8/README.md for instructions
 
-* composer require nrel/eere_app_bootstrap:dev-d8<br>
+No longer supported.
 
 ### For Drupal 7
 @see https://github.com/NREL/bootstrap_eere_app/blob/master/README.md
