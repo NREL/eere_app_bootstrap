@@ -76,5 +76,11 @@
       "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/client/css/* ./css/",
       "cp ../../../../vendor/nrel/eere_app_template_bootstrap5/client/fonts/* ./fonts/"
     ]
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "drupal/console-extend-plugin": true
+    }
   }
 }
