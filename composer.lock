@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e40c3ffed66df839728a0ea1c9213a3",
+    "content-hash": "f5194cc0c8e1ada4c4c4f888fc79eb35",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -529,16 +529,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.4.1",
+            "version": "9.3.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "81489e8f0d5fdcd5d502b561f0f8cdf5ccdda614"
+                "reference": "6291852a24fc8d2f494c842f03861ae63d0a54ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/81489e8f0d5fdcd5d502b561f0f8cdf5ccdda614",
-                "reference": "81489e8f0d5fdcd5d502b561f0f8cdf5ccdda614",
+                "url": "https://api.github.com/repos/drupal/core/zipball/6291852a24fc8d2f494c842f03861ae63d0a54ca",
+                "reference": "6291852a24fc8d2f494c842f03861ae63d0a54ca",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -548,11 +548,11 @@
                 ]
             },
             "require": {
-                "asm89/stack-cors": "^1.3",
-                "composer/semver": "^3.3",
-                "doctrine/annotations": "^1.13",
-                "doctrine/reflection": "^1.2",
-                "egulias/email-validator": "^2.1.22|^3.2",
+                "asm89/stack-cors": "^1.1",
+                "composer/semver": "^3.0",
+                "doctrine/annotations": "^1.12",
+                "doctrine/reflection": "^1.1",
+                "egulias/email-validator": "^2.1.22|^3.0",
                 "ext-date": "*",
                 "ext-dom": "*",
                 "ext-filter": "*",
@@ -566,36 +566,35 @@
                 "ext-spl": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
-                "laminas/laminas-diactoros": "^2.11",
-                "laminas/laminas-feed": "^2.17",
-                "masterminds/html5": "^2.7",
+                "guzzlehttp/guzzle": "^6.5.8",
+                "laminas/laminas-diactoros": "^2.1",
+                "laminas/laminas-feed": "^2.12",
+                "masterminds/html5": "^2.1",
                 "pear/archive_tar": "^1.4.14",
                 "php": ">=7.3.0",
-                "psr/log": "^1.1",
+                "psr/log": "^1.0",
                 "stack/builder": "^1.0",
-                "symfony-cmf/routing": "^2.3",
+                "symfony-cmf/routing": "^2.1",
                 "symfony/console": "^4.4",
                 "symfony/dependency-injection": "^4.4",
                 "symfony/event-dispatcher": "^4.4",
                 "symfony/http-foundation": "^4.4.7",
                 "symfony/http-kernel": "^4.4",
                 "symfony/mime": "^5.4",
-                "symfony/polyfill-iconv": "^1.25",
-                "symfony/polyfill-php80": "^1.25",
+                "symfony/polyfill-iconv": "^1.0",
+                "symfony/polyfill-php80": "^1.16",
                 "symfony/process": "^4.4",
-                "symfony/psr-http-message-bridge": "^2.1",
+                "symfony/psr-http-message-bridge": "^2.0",
                 "symfony/routing": "^4.4",
                 "symfony/serializer": "^4.4",
                 "symfony/translation": "^4.4",
                 "symfony/validator": "^4.4",
                 "symfony/yaml": "^4.4.19",
-                "twig/twig": "^2.15",
+                "twig/twig": "^2.12.0",
                 "typo3/phar-stream-wrapper": "^3.1.3"
             },
             "conflict": {
-                "drush/drush": "<8.1.10",
-                "symfony/http-foundation": "4.4.42"
+                "drush/drush": "<8.1.10"
             },
             "replace": {
                 "drupal/action": "self.version",
@@ -679,14 +678,12 @@
                 "drupal/migrate_drupal_multilingual": "self.version",
                 "drupal/migrate_drupal_ui": "self.version",
                 "drupal/minimal": "self.version",
-                "drupal/mysql": "self.version",
                 "drupal/node": "self.version",
                 "drupal/olivero": "self.version",
                 "drupal/options": "self.version",
                 "drupal/page_cache": "self.version",
                 "drupal/path": "self.version",
                 "drupal/path_alias": "self.version",
-                "drupal/pgsql": "self.version",
                 "drupal/quickedit": "self.version",
                 "drupal/rdf": "self.version",
                 "drupal/responsive_image": "self.version",
@@ -696,7 +693,6 @@
                 "drupal/settings_tray": "self.version",
                 "drupal/seven": "self.version",
                 "drupal/shortcut": "self.version",
-                "drupal/sqlite": "self.version",
                 "drupal/standard": "self.version",
                 "drupal/stark": "self.version",
                 "drupal/statistics": "self.version",
@@ -771,6 +767,9 @@
                     "lib/Drupal/Core/Cache/DatabaseCacheTagsChecksum.php",
                     "lib/Drupal/Core/Database/Connection.php",
                     "lib/Drupal/Core/Database/Database.php",
+                    "lib/Drupal/Core/Database/Driver/mysql/Connection.php",
+                    "lib/Drupal/Core/Database/Driver/pgsql/Connection.php",
+                    "lib/Drupal/Core/Database/Driver/sqlite/Connection.php",
                     "lib/Drupal/Core/Database/Statement.php",
                     "lib/Drupal/Core/Database/StatementInterface.php",
                     "lib/Drupal/Core/DependencyInjection/Container.php",
@@ -787,7 +786,7 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.4.1"
+                "source": "https://github.com/drupal/core/tree/9.3.18"
             },
             "transport-options": {
                 "ssl": {
@@ -795,7 +794,7 @@
                     "allow_self_signed": true
                 }
             },
-            "time": "2022-06-21T20:53:48+00:00"
+            "time": "2022-07-07T23:54:13+00:00"
         },
         {
             "name": "egulias/email-validator",

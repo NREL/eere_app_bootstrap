@@ -33,13 +33,12 @@
   "require": {
     "drupal/bootstrap_layouts": "^5.1",
     "drupal/bootstrap_barrio": "~5.5.2",
-    "drupal/core": "^9.4 || ^10",
-    "nrel/eere_app_template_bootstrap5": "dev-main"
+    "nrel/eere_app_template_bootstrap5": "dev-main",
+    "drupal/core": "~9.3.0"
   },
   "require-dev": {
     "drupal/console": "~1",
-    "drush/drush": "*",
-    "drupal/core": "^9.4 || ^10"
+    "drush/drush": "*"
   },
   "repositories": {
     "drupal": {
