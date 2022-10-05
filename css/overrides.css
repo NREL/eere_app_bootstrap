@@ -27,3 +27,17 @@ ol.breadcrumb > li + li:before {
 .alert.fade em a {
   color:#3c763d;
 }
+
+/* Fix side-effects introduced by styling for media - https://www.drupal.org/project/bootstrap_barrio/issues/3296223 */
+.form-actions {
+  position: initial;
+  bottom: 0;
+  background: none;
+  padding: initial;
+}
+.js-form-item {
+  margin: initial;
+}
+form .form-type-textarea {
+  margin-bottom: 15px;
+}
