@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "982eaadc88d287487054460e5d301090",
+    "content-hash": "46fb9b294110f3034174ee0013e0f4a6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -431,17 +431,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "5.5.7",
+            "version": "5.5.9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "5.5.7"
+                "reference": "5.5.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.7.zip",
-                "reference": "5.5.7",
-                "shasum": "2dbf37310ace0c2f24af5645169c4911dc54ae58"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.9.zip",
+                "reference": "5.5.9",
+                "shasum": "99b5d4431259a5ed04e7f9a09179a88ff57f31da"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10",
@@ -450,8 +450,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "5.5.7",
-                    "datestamp": "1673276579",
+                    "version": "5.5.9",
+                    "datestamp": "1674098246",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

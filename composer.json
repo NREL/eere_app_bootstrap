@@ -32,7 +32,7 @@
   },
   "require": {
     "drupal/bootstrap_layouts": "^5.1",
-    "drupal/bootstrap_barrio": "5.5.7",
+    "drupal/bootstrap_barrio": "5.5.9",
     "drupal/core": "^9.4 || ^10",
     "nrel/eere_app_template_bootstrap5": "dev-main"
   },
