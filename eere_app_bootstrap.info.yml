@@ -2,7 +2,6 @@ name: EERE App Bootstrap
 type: theme
 description: EERE App Bootstrap Barrio SubTheme.
 package: communications
-core: 8.x
 core_version_requirement: ^9 || ^10
 base theme: bootstrap_barrio
 
