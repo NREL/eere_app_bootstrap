@@ -21,11 +21,7 @@ nrel_karla:
     component:
       fonts/nrel_karla.css: {}
       https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i: {
-        type: external,
-        attributes: {
-          integrity: sha384-JtEi+tojlBQ9rC3xqP0dQzwbP2S1pm9TiR4mA/dS8SWvZWyFK2nmWd/cBCy2BmUw,
-          crossorigin: anonymous
-        }
+        type: external
       }
 # libraries-override
 fontawesome:
@@ -33,9 +29,5 @@ fontawesome:
   version: VERSION
   js:
     https://kit.fontawesome.com/36ddb5b453.js: {
-      type: external,
-      attributes: {
-        integrity: sha384-C3/VrKDWdssU0SAGlBJQmGT7ARZrnHi4TENdMfxZ2l3h0lvdvs80R1cHtz9I9sm6,
-        crossorigin: anonymous
-      }
+      type: external
     }
