@@ -33,13 +33,11 @@
   "require": {
     "drupal/bootstrap_layouts": "^5.1",
     "drupal/bootstrap_barrio": "^5.5",
-    "drupal/core": "^9.4 || ^10",
+    "drupal/core": "^10",
     "nrel/eere_app_template_bootstrap5": "dev-main"
   },
   "require-dev": {
-    "drupal/console": "~1",
-    "drush/drush": "*",
-    "drupal/core": "^9.4 || ^10"
+    "drush/drush": "*"
   },
   "repositories": {
     "drupal": {
@@ -47,16 +45,17 @@
       "url": "https://packages.drupal.org/8"
     },
     "assets" : {
-      "type": "composer",
-      "url": "https://asset-packagist.nrel.gov/nrel/drupal8/",
-      "options" : {
-        "ssl" : {
-          "verify_peer": false,
-          "allow_self_signed": true
-        }
-      }
-    },
-    "packages.drupal.org": false
+          "type": "composer",
+          "url": "https://packagist-repo.nrel.gov/nrel/communications/",
+          "options" : {
+              "ssl" : {
+                  "verify_peer": false,
+                  "allow_self_signed": true
+              }
+          }
+      },
+      "packagist.org": false,
+      "packages.drupal.org": false
   },
   "scripts": {
     "post-install-cmd": [

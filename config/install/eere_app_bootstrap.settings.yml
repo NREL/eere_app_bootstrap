@@ -1,7 +1,7 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://eere-project.test/femp/training/themes/contrib/eere_app_bootstrap/favicon.ico'
+  url: 'http://eere-project.test/themes/contrib/eere_app_bootstrap/favicon.ico'
   use_default: 1
 schemas:
   bootstrap: 8000
